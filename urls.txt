@@ -1,0 +1,8 @@
+1$ = 0,94€
+1€ = 1,06$
+
+Currency Exchange Service
+http://localhost:8001/currency-exchange/from/USD/to/EUR
+
+Currency Conversion Service
+http://localhost:8001/currency-exchange/from/USD/to/EUR/quantity/10
