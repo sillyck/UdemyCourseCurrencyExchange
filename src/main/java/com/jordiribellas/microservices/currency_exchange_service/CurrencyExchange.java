@@ -1,5 +1,8 @@
 package com.jordiribellas.microservices.currency_exchange_service;
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -9,13 +12,19 @@ import lombok.ToString;
 @Setter
 @ToString
 @NoArgsConstructor
+@Entity
 public class CurrencyExchange {
 
+	@Id
 	private Long id;
+	
+	@Column(name = "currency_from")
 	private String from;
+	
+	@Column(name = "currency_to")
 	private String to;
 	private double conversionMultiple;
-	private String enviorment;
+	private String environment;
 
 	public CurrencyExchange(Long id, String from, String to, double conversionMultiple) {
 		super();
