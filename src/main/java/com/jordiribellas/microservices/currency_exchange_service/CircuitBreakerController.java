@@ -17,7 +17,7 @@ public class CircuitBreakerController {
 	@GetMapping("/sample-api")
 //	@Retry(name = "sample-api", fallbackMethod = "hardcodedResponse")
 	
-	@CircuitBreaker(name = "sample-api", fallbackMethod = "hardcodedResponse")
+	@CircuitBreaker(name = "default", fallbackMethod = "hardcodedResponse")
 	public String sampleApi() {
 		logger.info("Sample Api call got correctly");
 		ResponseEntity<String> forEntity = new RestTemplate().getForEntity("http://localhost:8080/dummy-url-to-fail", String.class);
